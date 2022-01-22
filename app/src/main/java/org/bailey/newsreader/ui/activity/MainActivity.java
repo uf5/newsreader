@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             UserChannels.add(
                     new LispChannel(
                             "Closure Demo",
-                            "(define (make-counter n)\n(lambda () (set! n (+ n 1)) n))\n(define f (make-counter 0))\n(log (to-string (f)))\n(log (to-string (f)))\n(log (to-string (f)))\n\"Check to see the result\""
+                            "(define (make-counter n)\n(lambda () (set! n (+ n 1)) n))\n(define f (make-counter 0))\n(log (to-string (f)))\n(log (to-string (f)))\n(log (to-string (f)))\n\"Check log to see the result\""
                     )
             );
             UserChannels.add(
