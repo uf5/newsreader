@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Newsreader</string>
+
+    <string name="action_refresh">Refresh</string>
+    <string name="action_log">Log</string>
+
+    <string name="title_script">Editing %s</string>
+    <string name="title_log">Log</string>
+
+    <string name="action_script_save">Save</string>
+
+    <string name="menu_channel_title_rename">Rename</string>
+    <string name="menu_channel_title_duplicate">Duplicate</string>
+    <string name="menu_channel_title_edit">Edit</string>
+    <string name="menu_channel_title_delete">Delete</string>
+    <string name="menu_log_title_clear">Clear</string>
+
+    <string name="menu_share">Share</string>
+
+    <string name="help_title">Help</string>
+
+    <string name="help_text">
+        " Press the plus button at the right bottom of the screen to create a new channel.\n"
+        "Press the channel card to view channel posts.\n"
+        "Hold the channel card to view actions such as edit, rename, refresh etc."
+    </string>
+
+    <string name="fab_create_new_channel">Create new channel</string>
+    <string name="example_script">(log &quot;Hello, World&quot;)</string>
+    <string name="dialog_new_script_title">Create a new channel:</string>
+    <string name="dialog_name">Name</string>
+    <string name="dialog_rename_title">Enter a new name</string>
+
+    <string name="loading">Loading</string>
+    <string name="evaluation_result">Evaluation result</string>
+    <string name="stop_evaluation">Stop evaluation</string>
+
+    <string name="error_msg">Runtime Error! Check log for more information.</string>
+    <string name="saved_msg">"Saved %s"</string>
+</resources>

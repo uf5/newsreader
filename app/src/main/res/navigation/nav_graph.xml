@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/channelsFragment">
+
+    <fragment
+        android:id="@+id/channelsFragment"
+        android:name="org.bailey.newsreader.ui.fragment.ChannelsFragment"
+        android:label="Channels"
+        tools:layout="@layout/fragment_channels">
+        <action
+            android:id="@+id/action_channelsFragment_to_loadingFragment"
+            app:destination="@id/loadingFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_channelsFragment_to_postsFragment"
+            app:destination="@id/postsFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_channelsFragment_to_postFragment"
+            app:destination="@id/postFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="org.bailey.newsreader.ui.fragment.LoadingFragment"
+        android:label="@string/loading"
+        tools:layout="@layout/fragment_loading">
+        <action
+            android:id="@+id/action_loadingFragment_to_postsFragment"
+            app:destination="@id/postsFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"
+            app:popUpTo="@id/channelsFragment" />
+        <action
+            android:id="@+id/action_loadingFragment_to_postFragment"
+            app:destination="@id/postFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"
+            app:popUpTo="@id/channelsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="org.bailey.newsreader.ui.fragment.PostFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_post">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="text"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="org.bailey.newsreader.ui.fragment.PostsFragment"
+        android:label="{channel_name}"
+        tools:layout="@layout/fragment_posts">
+        <action
+            android:id="@+id/action_postsFragment_to_postFragment"
+            app:destination="@id/postFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <argument
+            android:name="channel_name"
+            app:argType="string" />
+    </fragment>
+</navigation>
